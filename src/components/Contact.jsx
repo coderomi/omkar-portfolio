@@ -7,10 +7,10 @@ const Contact = () => {
       id="contact"
     >
       {/* Intense Glowing Lights (Centered and Balanced) */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-blue-400 opacity-80 blur-[80px] rounded-full"></div>
-      <div className="absolute top-1/3 left-1/3 transform -translate-x-1/2 -translate-y-1/2 w-36 h-36 bg-blue-500 opacity-80 blur-[80px] rounded-full"></div>
-      <div className="absolute bottom-1/3 right-1/3 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-sky-400 opacity-80 blur-[80px] rounded-full"></div>
-      <div className="absolute bottom-1/2 right-1/2 transform -translate-x-1/2 -translate-y-1/2 w-28 h-28 bg-blue-600 opacity-80 blur-[80px] rounded-full"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-blue-400 opacity-80 blur-[80px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-1/3 left-1/3 transform -translate-x-1/2 -translate-y-1/2 w-36 h-36 bg-blue-500 opacity-80 blur-[80px] rounded-full pointer-events-none"></div>
+      <div className="absolute bottom-1/3 right-1/3 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-sky-400 opacity-80 blur-[80px] rounded-full pointer-events-none"></div>
+      <div className="absolute bottom-1/2 right-1/2 transform -translate-x-1/2 -translate-y-1/2 w-28 h-28 bg-blue-600 opacity-80 blur-[80px] rounded-full pointer-events-none"></div>
       
       <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-sky-500 to-blue-400 text-center">
         Message Me
@@ -19,12 +19,8 @@ const Contact = () => {
       <form
         action="https://formsubmit.co/sontakkeomkar40@gmail.com"
         method="POST"
-        className="relative mt-8 w-full max-w-lg bg-gray-900 p-6 rounded-lg shadow-2xl shadow-blue-800 scale-105 transition-none"
+        className="relative mt-8 w-full max-w-lg bg-gray-900 p-6 rounded-lg shadow-2xl shadow-blue-800 scale-105"
       >
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-20 h-20 bg-blue-500 opacity-90 blur-[90px] rounded-full"></div>
-        </div>
-        
         {/* Name Input */}
         <div className="mb-4">
           <label className="block text-gray-300 text-sm font-semibold mb-2">Your Name</label>
