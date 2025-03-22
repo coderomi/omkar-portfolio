@@ -1,54 +1,88 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const Contact = () => {
-  const handleGetInTouch = () => {
-    const recipient = 'sontakkeomkar40@gmail.com';
-    const subject = encodeURIComponent('Inquiry from Website');
-    const body = encodeURIComponent('Hello,\n\nI would like to get in touch regarding...');
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${subject}&body=${body}`;
-    window.open(gmailUrl, '_blank');
-  };
-
   return (
-    <div className="mx-auto w-full min-h-[50vh] px-4 sm:px-6 lg:px-8 text-white flex flex-col items-center justify-center" id="contact">
-      <motion.h1
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.1 }}
-        className="text-4xl sm:text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-sky-500 to-blue-400 text-center"
-      >
-        Contact Me
-      </motion.h1>
+    <div 
+      className="relative mx-auto w-full min-h-[60vh] px-4 sm:px-6 lg:px-8 text-white flex flex-col items-center justify-center overflow-hidden" 
+      id="contact"
+    >
+      {/* Intense Glowing Lights (Centered and Balanced) */}
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-blue-400 opacity-80 blur-[80px] rounded-full"></div>
+      <div className="absolute top-1/3 left-1/3 transform -translate-x-1/2 -translate-y-1/2 w-36 h-36 bg-blue-500 opacity-80 blur-[80px] rounded-full"></div>
+      <div className="absolute bottom-1/3 right-1/3 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-sky-400 opacity-80 blur-[80px] rounded-full"></div>
+      <div className="absolute bottom-1/2 right-1/2 transform -translate-x-1/2 -translate-y-1/2 w-28 h-28 bg-blue-600 opacity-80 blur-[80px] rounded-full"></div>
+      
+      <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-sky-500 to-blue-400 text-center">
+        Message Me
+      </h1>
 
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        className="text-gray-300 text-lg text-center max-w-2xl leading-relaxed mt-4"
+      <form
+        action="https://formsubmit.co/sontakkeomkar40@gmail.com"
+        method="POST"
+        className="relative mt-8 w-full max-w-lg bg-gray-900 p-6 rounded-lg shadow-2xl shadow-blue-800 scale-105 transition-none"
       >
-       Have a game-changing idea for a web or mobile project? Let’s build something exceptional with the latest technology and creativity! 🚀
-      </motion.p>
-
-      <motion.button
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.5 }}
-        onClick={handleGetInTouch}
-        className="relative overflow-hidden group bg-gradient-to-r from-blue-600 via-sky-500 to-blue-400 px-8 py-4 md:text-lg rounded-full font-semibold transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 text-white mt-8"
-      >
-        <span className="relative z-10">Get in Touch</span>
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-      </motion.button>
-
-      <footer className="w-full mt-16 border-t border-gray-800/30 p-10">
-        <div className="text-gray-400 text-center text-sm sm:text-base hover:text-gray-300 transition-colors">
-          © 2025 Omkar Sontakke | All rights reserved.
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-20 h-20 bg-blue-500 opacity-90 blur-[90px] rounded-full"></div>
         </div>
-      </footer>
+        
+        {/* Name Input */}
+        <div className="mb-4">
+          <label className="block text-gray-300 text-sm font-semibold mb-2">Your Name</label>
+          <input
+            type="text"
+            name="name"
+            required
+            className="w-full px-4 py-2 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Enter your name"
+          />
+        </div>
+
+        {/* Email Input */}
+        <div className="mb-4">
+          <label className="block text-gray-300 text-sm font-semibold mb-2">Your Email</label>
+          <input
+            type="email"
+            name="email"
+            required
+            className="w-full px-4 py-2 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Enter your email"
+          />
+        </div>
+
+        {/* Mobile Number (Optional) */}
+        <div className="mb-4">
+          <label className="block text-gray-300 text-sm font-semibold mb-2">Mobile Number (Optional)</label>
+          <input
+            type="tel"
+            name="mobile"
+            className="w-full px-4 py-2 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Enter your mobile number"
+          />
+        </div>
+
+        {/* Message Input */}
+        <div className="mb-4">
+          <label className="block text-gray-300 text-sm font-semibold mb-2">Your Message</label>
+          <textarea
+            name="message"
+            required
+            rows="4"
+            className="w-full px-4 py-2 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Type your message here..."
+          ></textarea>
+        </div>
+
+        {/* No Captcha */}
+        <input type="hidden" name="_captcha" value="false" />
+
+        {/* Submit Button */}
+        <button
+          type="submit"
+          className="w-full bg-blue-500 text-white px-6 py-2 rounded-md font-semibold hover:bg-blue-700 transition-all duration-300"
+        >
+          Send Message
+        </button>
+      </form>
     </div>
   );
 };
